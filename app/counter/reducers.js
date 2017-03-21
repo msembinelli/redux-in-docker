@@ -5,7 +5,7 @@ import { combineReducers } from 'redux'
 const count = makeActionReducers({
   [increment]: (state, { payload }) => state + payload,
   [decrement]: (state, { payload }) => state - payload,
-  [reset]: (state) => 0,
+  [reset]: () => 0,
 }, 0)
 
 const step = makeActionReducers({
