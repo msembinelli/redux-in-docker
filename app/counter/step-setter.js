@@ -26,7 +26,7 @@ export default class StepSetter extends Component {
   changeStep = event => {
     const step = toNumber(event.target.value)
     let errorText
-    if (inRange(step, STEP_MIN, STEP_MAX + 1)) {
+    if (inRange(step, STEP_MIN, STEP_MAX + STEP_MIN)) {
       this.props.changeStep(step)
       errorText = null
     } else {
